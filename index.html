@@ -232,6 +232,36 @@
             .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .exp-date { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
+
+        /* --- استایل بخش QR Code در سایدبار --- */
+.qr-section {
+    margin-top: 35px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.qr-title {
+    font-size: 0.75rem;
+    color: #bdc3c7;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.qr-wrapper {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.qr-wrapper svg, 
+.qr-wrapper img {
+    width: 110px;
+    height: 110px;
+    display: block;
+}
     </style>
 </head>
 <body>
@@ -310,6 +340,13 @@
                     <span class="skill-tag">PHP/MySQL</span>
                 </div>
             </div>
+            <!-- بخش QR Code نسخه دیجیتال -->
+    <div class="qr-section">
+        <div class="qr-title">نسخــه‌ی دیجیـتال رزومــه</div>
+        <div class="qr-wrapper">
+           <img src="qrcode.svg" alt="QRCode" style="width: 120px;">
+        </div>
+    </div>
         </aside>
 
         <!-- بخش اصلی -->
