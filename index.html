@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رزومه حامد خانه‌پز</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -19,7 +21,11 @@
             --bg-body: #f4f7f6;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -37,7 +43,7 @@
             max-width: 1050px;
             width: 100%;
             background: var(--white);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
             overflow: hidden;
             min-height: 100vh;
@@ -49,10 +55,11 @@
             color: var(--sidebar-text);
             padding: 40px 25px;
         }
+
         .summary-text strong {
-    color: var(--primary-color);
-    font-weight: 800;
-}
+            color: var(--primary-color);
+            font-weight: 800;
+        }
 
         .profile-photo {
             width: 180px;
@@ -64,14 +71,21 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border: 4px solid rgba(255,255,255,0.2);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        .profile-photo img { width: 100%; height: 100%; object-fit: cover;
-            top: -1px;
-    position: relative; }
 
-        .sidebar-section { margin-bottom: 30px; }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: -1px;
+            position: relative;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
 
         .sidebar-title {
             font-size: 1rem;
@@ -91,30 +105,54 @@
             align-items: center;
             gap: 8px;
         }
-        .info-label { font-weight: 700; color: #bdc3c7; min-width: 65px; font-size: 0.8rem; }
+
+        .info-label {
+            font-weight: 700;
+            color: #bdc3c7;
+            min-width: 65px;
+            font-size: 0.8rem;
+        }
 
         .skill-tag {
             display: inline-block;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: #fff;
             padding: 4px 10px;
             border-radius: 4px;
             font-size: 0.75rem;
             margin: 2px;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         /* استایل جدید گواهینامه‌ها در سایدبار (در صورت نیاز) یا بخش اصلی */
         /* اینجا برای بخش اصلی استفاده شده اما اگر بخواهید در سایدبار باشد هم قابل استفاده است */
 
         /* --- بخش اصلی --- */
-        .main-content { padding: 45px 40px; }
+        .main-content {
+            padding: 45px 40px;
+        }
 
-        header { margin-bottom: 35px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        h1 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 5px; }
-        .job-title { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; }
+        header {
+            margin-bottom: 35px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
 
-        .section { margin-bottom: 35px; }
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
 
         .section-title {
             font-size: 1.3rem;
@@ -125,12 +163,23 @@
             position: relative;
             font-weight: 800;
         }
+
         .section-title::after {
-            content: ''; position: absolute; bottom: -2px; right: 0;
-            width: 60px; height: 2px; background: var(--accent-color);
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--accent-color);
         }
 
-        .summary-text { text-align: justify; color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        .summary-text {
+            text-align: justify;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
 
         /* سوابق کاری */
         .experience-item {
@@ -138,15 +187,47 @@
             padding-right: 15px;
             border-right: 3px solid #eef2f5;
         }
-        .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 8px; }
-        .exp-role { font-size: 1.05rem; font-weight: 800; color: var(--text-dark); }
-        .exp-company { color: var(--accent-color); font-weight: 700; font-size: 0.9rem; }
-        .exp-date { 
-            font-size: 0.75rem; color: var(--white); background: var(--primary-color); 
-            padding: 2px 8px; border-radius: 20px; 
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
         }
-        .exp-details ul { list-style-type: disc; padding-right: 18px; color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
-        .exp-details li { margin-bottom: 4px; text-align: justify; }
+
+        .exp-role {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .exp-company {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .exp-date {
+            font-size: 0.7rem;
+            color: var(--white);
+            background: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+
+        .exp-details ul {
+            list-style-type: disc;
+            padding-right: 18px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .exp-details li {
+            margin-bottom: 4px;
+            text-align: justify;
+        }
 
         /* 1. اصلاح پروژه‌های کلیدی: فاصله کم + جاستیفای */
         .project-item {
@@ -156,34 +237,71 @@
             font-size: 0.88rem;
             color: var(--text-light);
         }
-        .project-item strong { color: var(--text-dark); font-weight: 700; }
+
+        .project-item strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
 
         /* 2. اصلاح سوابق تحصیلی: جمع‌وجورتر */
         .education-item {
-            margin-bottom: 15px; /* کاهش فاصله */
+            margin-bottom: 15px;
+            /* کاهش فاصله */
             padding-right: 15px;
             border-right: 3px solid #eef2f5;
         }
-        .edu-degree { font-size: 1rem; font-weight: 700; color: var(--text-dark); } /* کمی کوچکتر */
-        .edu-univ { color: var(--accent-color); font-size: 0.85rem; font-weight: 600; }
-        .edu-score { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+
+        .edu-degree {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--sidebar-text);
+        }
+
+        /* کمی کوچکتر */
+        .edu-univ {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .edu-score {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
 
         /* 3. اصلاح گواهینامه‌های تخصصی: چیدمان منظم لیستی */
-        .cert-category { margin-bottom: 18px; }
-        .cert-cat-title { 
-            font-weight: 800; color: var(--primary-color); font-size: 0.95rem; 
-            margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+        .cert-category {
+            margin-bottom: 18px;
         }
+
+        .cert-cat-title {
+            font-weight: 800;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .cert-cat-title::before {
-            content: ''; display: inline-block; width: 6px; height: 6px;
-            background: var(--accent-color); border-radius: 50%;
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--accent-color);
+            border-radius: 50%;
         }
+
         .cert-list {
             display: flex;
-            flex-direction: column; /* تغییر به ستونی برای نظم بیشتر */
+            flex-direction: column;
+            /* تغییر به ستونی برای نظم بیشتر */
             gap: 4px;
             padding-right: 14px;
         }
+
         .cert-badge {
             background: transparent;
             border: none;
@@ -196,6 +314,7 @@
             line-height: 1.4;
             text-align: justify;
         }
+
         .cert-badge::before {
             content: '•';
             color: var(--accent-color);
@@ -205,121 +324,230 @@
         }
 
         /* افتخارات */
-        .honor-item { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
-        .honor-icon {
-            min-width: 28px; height: 28px; background: #fff8e1; color: #f39c12;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 0.8rem; margin-top: 2px;
+        .honor-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: flex-start;
         }
-        .honor-text { font-size: 0.9rem; color: var(--text-dark); line-height: 1.5; text-align: justify; }
-        .honor-year { font-size: 0.75rem; color: var(--text-light); display: block; margin-top: 2px; }
+
+        .honor-icon {
+            min-width: 28px;
+            height: 28px;
+            background: #fff8e1;
+            color: #f39c12;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .honor-text {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .honor-year {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: block;
+            margin-top: 2px;
+        }
 
         @media (max-width: 850px) {
-            .resume-container { grid-template-columns: 1fr; }
-            .sidebar { text-align: center; border-bottom: 5px solid var(--accent-color); }
-            .sidebar-title { display: block; }
-            .info-item { justify-content: center; }
-            .main-content { padding: 30px 20px; }
-            .exp-header { flex-direction: column; gap: 5px; }
-            .cert-list { padding-right: 0; align-items: center; }
-            .cert-badge { padding-right: 0; text-align: center; }
-            .cert-badge::before { display: none; }
+            .resume-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+                border-bottom: 5px solid var(--accent-color);
+            }
+
+            .sidebar-title {
+                display: block;
+            }
+
+            .info-item {
+                justify-content: center;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .cert-list {
+                padding-right: 0;
+                align-items: normal;
+            }
+
+            .cert-badge {
+                padding-right: 0;
+                text-align: right;
+            }
+
+            .cert-badge::before {
+                display: none;
+            }
         }
 
         @media print {
-            body { background: white; padding: 0; }
-            .resume-container { box-shadow: none; max-width: 100%; border-radius: 0; }
-            .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            .exp-date { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+                border-radius: 0;
+            }
+
+            .sidebar {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .exp-date {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
         }
 
         /* --- استایل بخش QR Code در سایدبار --- */
-.qr-section {
-    margin-top: 35px;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px dashed rgba(255, 255, 255, 0.2);
-}
+        .qr-section {
+            margin-top: 35px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+        }
 
-.qr-title {
-    font-size: 0.75rem;
-    color: #bdc3c7;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
+        .qr-title {
+            font-size: 0.75rem;
+            color: #bdc3c7;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
 
-.qr-wrapper {
-    background: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+        .qr-wrapper {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.qr-wrapper svg, 
-.qr-wrapper img {
-    width: 110px;
-    height: 110px;
-    display: block;
-}
+        .qr-wrapper svg,
+        .qr-wrapper img {
+            width: 110px;
+            height: 110px;
+            display: block;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="resume-container">
         <!-- سایدبار -->
         <aside class="sidebar">
             <div class="profile-photo">
-                <img src="1.jpg" alt="حامد خانه‌پز" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:#7f8c8d\'>📷</span>'">
+                <img src="1.jpg" alt="حامد خانه‌پز"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:#7f8c8d\'>📷</span>'">
             </div>
 
             <div class="sidebar-section">
                 <h3 class="sidebar-title">اطلاعات فردی</h3>
                 <div class="info-item"><span class="info-label">تولد:</span><span>۱۳۶۵</span></div>
                 <div class="info-item"><span class="info-label">شهر:</span><span>قزوین، ایران</span></div>
+                <!-- <div class="info-item"><span class="info-label">وضعیت تاهل:</span><span>متاهل</span></div> -->
             </div>
 
             <div class="sidebar-section">
                 <h3 class="sidebar-title">تماس</h3>
-                <div class="info-item"><span class="info-label">موبایل:</span><span dir="ltr">+98 919 389 8001</span></div>
-                <div class="info-item"><span class="info-label">ایمیل:</span><span dir="ltr" style="font-size:0.75rem;">H.khanepaz@gmail.com</span></div>
-                    <div class="info-item">
+                <div class="info-item"><span class="info-label">موبایل:</span><span dir="ltr">+98 919 389 8001</span>
+                </div>
+                <div class="info-item"><span class="info-label">ایمیل:</span><span dir="ltr"
+                        style="font-size:0.75rem;">H.khanepaz@gmail.com</span></div>
+                <div class="info-item">
                     <span class="info-label">Linkedin</span>
-                    <a href="https://www.linkedin.com/in/hamed-khanepaz-7876478a/" target="_blank" rel="noopener noreferrer" 
-                       style="font-size:0.75rem; color: #3498db; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
-                       onmouseover="this.style.color='#3498db'; this.style.borderBottom='1px solid #fff'" 
-                       onmouseout="this.style.color='#fff'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
+                    <a href="https://www.linkedin.com/in/hamed-khanepaz-7876478a/" target="_blank"
+                        rel="noopener noreferrer"
+                        style="font-size:0.75rem; color: #3498db; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
+                        onmouseover="this.style.color='#3498db'; this.style.borderBottom='1px solid #fff'"
+                        onmouseout="this.style.color='#fff'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
                         <img src="linkedin-svgrepo-com.svg" alt="" style="width:20px;">
                     </a>
                 </div>
                 <div class="info-item">
                     <span class="info-label">پلتفرم LIMS اختصاصی:</span>
-                    <a href="https://iso17025-docs.ir" target="_blank" rel="noopener noreferrer" 
-                       style="font-size:0.75rem; color: #fff; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
-                       onmouseover="this.style.color='#fff'; this.style.borderBottom='1px solid #fff'" 
-                       onmouseout="this.style.color='#3498db'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
+                    <a href="https://iso17025-docs.ir" target="_blank" rel="noopener noreferrer"
+                        style="font-size:0.75rem; color: #fff; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
+                        onmouseover="this.style.color='#fff'; this.style.borderBottom='1px solid #fff'"
+                        onmouseout="this.style.color='#3498db'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
                         Iso17025-docs.ir
                     </a>
                 </div>
             </div>
 
+            <!-- 2. سوابق تحصیلی: جمع‌وجورتر -->
+            <section class="sidebar-section">
+                <h2 class="sidebar-title">سوابق تحصیلی</h2>
+                <div class="education-item">
+                    <div class="exp-header">
+                        <div class="edu-degree">کارشناسی ارشد مهندسی مواد (ریخته‌گری)</div>
+                        <div class="exp-date">دانشگاه علم و صنعت ایران</div>
+                    </div>
+                    <!-- <div class="edu-univ">رتبه اول، معدل ۱۶٫۱۰</div> -->
+                </div>
+                <div class="education-item">
+                    <div class="exp-header">
+                        <div class="edu-degree">کارشناسی مهندسی مواد (متالورژی صنعتی)</div>
+                        <div class="exp-date">دانشگاه بین‌المللی امام خمینی (ره)</div>
+                    </div>
+                    <!-- <div class="edu-univ">رتبه دوم، معدل ۱۶٫۷۲</div> -->
+                </div>
+            </section>
+
+
+
+
             <div class="sidebar-section">
-                <h3 class="sidebar-title">مهارت‌های کلیدی</h3>
+                       <h3 class="sidebar-title">مهارت‌های مدیریتی</h3>
                 <div>
-                    <span class="skill-tag">ISO/IEC 17025</span>
-                    <span class="skill-tag">مدیریت کیفیت</span>
-                    <span class="skill-tag">LIMS</span>
-                    <span class="skill-tag">SPC</span>
+                      <span class="skill-tag">مدیریت کیفیت</span>
                      <span class="skill-tag">رهبری تیم</span>
                     <span class="skill-tag">تحول دیجیتال</span>
                     <span class="skill-tag">ممیزی داخلی</span>
                     <span class="skill-tag">مدیریت ریسک</span>
+                </div>
+                <br>
+
+                <h3 class="sidebar-title">مهارت‌های تخصصی</h3>
+                <div>
+                    <span class="skill-tag">ISO/IEC 17025</span>
+                    <span class="skill-tag">LIMS</span>
+                    <span class="skill-tag">SPC</span>
                     <span class="skill-tag">تضمین کیفیت نتایج</span>
                     <span class="skill-tag">محاسبات عدم قطعیت</span>
-                    <span class="skill-tag" >متالوگرافی</span>
+                    <span class="skill-tag">متالوگرافی</span>
                     <span class="skill-tag">کوانتومتری</span>
-                   <span class="skill-tag">آزمون های مکانیکی فلزات</span>
+                    <span class="skill-tag">آزمون های مکانیکی فلزات</span>
+                   
                 </div>
+          
+
+
+
             </div>
 
             <div class="sidebar-section">
@@ -341,12 +569,12 @@
                 </div>
             </div>
             <!-- بخش QR Code نسخه دیجیتال -->
-    <div class="qr-section">
-        <div class="qr-title">نسخــه‌ی دیجیـتال رزومــه</div>
-        <div class="qr-wrapper">
-           <img src="qrcode.svg" alt="QRCode" style="width: 120px;">
-        </div>
-    </div>
+            <div class="qr-section">
+                <div class="qr-title">نسخــه‌ی دیجیـتال رزومــه</div>
+                <div class="qr-wrapper">
+                    <img src="qrcode.svg" alt="QRCode" style="width: 120px;">
+                </div>
+            </div>
         </aside>
 
         <!-- بخش اصلی -->
@@ -359,20 +587,23 @@
             <section class="section">
                 <h2 class="section-title">خلاصه رزومه</h2>
                 <p class="summary-text">
-                    مدیر کنترل کیفیت و آزمایشگاه با بیش از ۱۳ سال تجربه در صنعت فولاد، متخصص در تحول دیجیتال آزمایشگاه‌ها، <strong>استقرار ISO/IEC 17025</strong>، کنترل کیفیت خطوط تولید فولادی و توسعه سیستم‌های تصمیم‌یار کیفیت. دارای تجربه مدیریت تیم‌های کیفی، <strong>طراحی LIMS اختصاصی</strong> و بهبود مستمر فرآیندهای کنترل کیفیت.
+                    مدیر کنترل کیفیت و آزمایشگاه با بیش از ۱۳ سال تجربه در صنعت فولاد، متخصص در تحول دیجیتال
+                    آزمایشگاه‌ها، <strong>استقرار ISO/IEC 17025</strong>، کنترل کیفیت خطوط تولید فولادی و توسعه
+                    سیستم‌های تصمیم‌یار کیفیت. دارای تجربه مدیریت تیم‌های کیفی، <strong>طراحی LIMS اختصاصی</strong> و
+                    بهبود مستمر فرآیندهای کنترل کیفیت.
                 </p>
             </section>
 
             <section class="section">
                 <h2 class="section-title">سوابق کاری</h2>
-                
+
                 <div class="experience-item">
                     <div class="exp-header">
                         <div>
                             <div class="exp-role">مدیر فنی آزمایشگاه</div>
                             <div class="exp-company">شرکت صنایع هفت الماس</div>
                         </div>
-                        <div class="exp-date">مهر ۱۳۹۶ تا کنون</div>
+                        <div class="exp-date"> ۱۳۹۶ تاکنون</div>
                     </div>
                     <div class="exp-details">
                         <ul>
@@ -392,7 +623,7 @@
                             <div class="exp-role">مدیر کنترل کیفیت خطوط تولید</div>
                             <div class="exp-company">شرکت صنایع هفت الماس</div>
                         </div>
-                        <div class="exp-date">۱۳۹۲ تا مهر ۱۳۹۶</div>
+                        <div class="exp-date">۱۳۹۲ تا ۱۳۹۶</div>
                     </div>
                     <div class="exp-details">
                         <ul>
@@ -413,7 +644,8 @@
                     </div>
                     <div class="exp-details">
                         <ul>
-                            <li>تدریس خواص مکانیکی مواد، ریخته‌گری، طراحی مهندسی جوشکاری، عملیات حرارتی و روش‌های تولید.</li>
+                            <li>تدریس خواص مکانیکی مواد، ریخته‌گری، طراحی مهندسی جوشکاری، عملیات حرارتی و روش‌های تولید.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -422,49 +654,37 @@
             <!-- 1. پروژه‌های کلیدی: فاصله کم + جاستیفای -->
             <section class="section">
                 <h2 class="section-title">پروژه‌های کلیدی و دستاوردها</h2>
-                <div class="project-item"><strong>استقرار کامل استاندارد ۱۷۰۲۵:</strong> تدوین بیش از ۱۰۰ سند و اخذ گواهی اعتباربخشی.</div>
-                <div class="project-item"><strong>سامانه LIMS اختصاصی:</strong> شامل ماژول‌های مدیریت ریسک، عدم‌اطمینان، SPC و قاعده تصمیم‌گیری. نتیجه: کاهش ۶۰٪ زمان پردازش.<a href="https://iso17025-docs.ir" target="_blank" rel="noopener noreferrer" 
-                       style="font-size:0.85rem; color: #3498db; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
-                       onmouseover="this.style.color='#3498db'; this.style.borderBottom='1px solid #fff'" 
-                       onmouseout="this.style.color='#3498db'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
-                       ورود به سایت
+                <div class="project-item"><strong>استقرار کامل استاندارد ۱۷۰۲۵:</strong> تدوین بیش از ۱۰۰ سند و اخذ
+                    گواهی اعتباربخشی.</div>
+                <div class="project-item"><strong>سامانه LIMS اختصاصی:</strong> شامل ماژول‌های مدیریت ریسک، عدم‌اطمینان،
+                    SPC و قاعده تصمیم‌گیری. نتیجه: کاهش ۶۰٪ زمان پردازش.<a href="https://iso17025-docs.ir"
+                        target="_blank" rel="noopener noreferrer"
+                        style="font-size:0.85rem; color: #3498db; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
+                        onmouseover="this.style.color='#3498db'; this.style.borderBottom='1px solid #fff'"
+                        onmouseout="this.style.color='#3498db'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
+                        ورود به سایت
                     </a> </div>
-                <div class="project-item"><strong>دستگاه فام‌سنج:</strong> طراحی مکانیکی، الکترونیکی و نرم‌افزاری با قابلیت اتصال به LIMS؛ کاهش ۴۰٪ هزینه‌های آزمون.</div>
-                <div class="project-item"><strong>تدوین استانداردهای ملی (INSO):</strong> عضویت در ۶ کمیسیون (ورق گالوانیزه، آزمون خستگی، سختی‌سنجی ناپ، ورق سرد نوردیده).</div>
-                <div class="project-item"><strong>دوره‌های آموزشی ضمن‌خدمت:</strong> طراحی و اجرای بیش از ۲۰ دوره آموزشی برای پرسنل آزمایشگاه و تولید.</div>
+                <div class="project-item"><strong>دستگاه فام‌سنج:</strong> طراحی مکانیکی، الکترونیکی و نرم‌افزاری با
+                    قابلیت اتصال به LIMS؛ کاهش ۴۰٪ هزینه‌های آزمون.</div>
+                <div class="project-item"><strong>تدوین استانداردهای ملی (INSO):</strong> عضویت در ۶ کمیسیون (ورق
+                    گالوانیزه، آزمون خستگی، سختی‌سنجی ناپ، ورق سرد نوردیده).</div>
+                <div class="project-item"><strong>دوره‌های آموزشی ضمن‌خدمت:</strong> طراحی و اجرای بیش از ۲۰ دوره آموزشی
+                    برای پرسنل آزمایشگاه و تولید.</div>
             </section>
 
-            <!-- 2. سوابق تحصیلی: جمع‌وجورتر -->
-            <section class="section">
-                <h2 class="section-title">سوابق تحصیلی</h2>
-                <div class="education-item">
-                    <div class="exp-header">
-                        <div class="edu-degree">کارشناسی ارشد مهندسی مواد (ریخته‌گری)</div>
-                        <div class="exp-date">دانشگاه علم و صنعت ایران</div>
-                    </div>
-                    <div class="edu-univ">رتبه اول، معدل ۱۶٫۱۰</div>
-                </div>
-                <div class="education-item">
-                    <div class="exp-header">
-                        <div class="edu-degree">کارشناسی مهندسی مواد (متالورژی صنعتی)</div>
-                        <div class="exp-date">دانشگاه بین‌المللی امام خمینی (ره)</div>
-                    </div>
-                    <div class="edu-univ">رتبه دوم، معدل ۱۶٫۷۲</div>
-                </div>
-            </section>
 
             <!-- 3. گواهینامه‌های تخصصی: چیدمان لیستی منظم -->
             <section class="section">
                 <h2 class="section-title">گواهینامه‌های تخصصی</h2>
-                
+
                 <div class="cert-category">
                     <div class="cert-cat-title">مدیریت کیفیت</div>
                     <div class="cert-list">
                         <span class="cert-badge">ISO 9001، مبانی و مستندسازی ۱۷۰۲۵</span>
                         <span class="cert-badge">ممیزی داخلی ۱۷۰۲۵، مدیریت ریسک آزمایشگاه</span>
-                        <span class="cert-badge">تضمین کیفیت نتایج، تخمین عدم قطعیت،  صحه‌گذاری روش‌های آزمون</span>
+                        <span class="cert-badge">تضمین کیفیت نتایج، تخمین عدم قطعیت، صحه‌گذاری روش‌های آزمون</span>
                         <span class="cert-badge">کنترل کیفیت داخلی ، مقایسات بین‌آزمایشگاهی، بیانیه انطباق</span>
-                         <span class="cert-badge">اندازه‌گیری و کالیبراسیون، محاسبه بازه‌های کالیبراسیون</span>
+                        <span class="cert-badge">اندازه‌گیری و کالیبراسیون، محاسبه بازه‌های کالیبراسیون</span>
                     </div>
                 </div>
 
@@ -474,7 +694,7 @@
                         <span class="cert-badge">ساختار و شیوه نگارش استانداردهای ملی</span>
                         <span class="cert-badge">روش اجرایی فرایند تدوین استاندارد</span>
                         <span class="cert-badge">قوانین سازمان ملی استاندارد</span>
-                           <span class="cert-badge">اصول سرپرستی، نگارش نظامنامه کیفیت</span>
+                        <span class="cert-badge">اصول سرپرستی، نگارش نظامنامه کیفیت</span>
                     </div>
                 </div>
 
@@ -498,11 +718,12 @@
             <!-- افتخارات و عضویت‌ها -->
             <section class="section">
                 <h2 class="section-title">افتخارات و عضویت‌های حرفه‌ای</h2>
-                
+
                 <div class="honor-item">
                     <div class="honor-icon">🏆</div>
                     <div>
-                        <div class="honor-text">رتبه برتر طرح‌های نوآورانه، چهارمین همایش آزمایشگاه‌های زنجیره معدن و فولاد</div>
+                        <div class="honor-text">رتبه برتر طرح‌های نوآورانه، چهارمین همایش آزمایشگاه‌های زنجیره معدن و
+                            فولاد</div>
                         <span class="honor-year">۱۴۰۴</span>
                     </div>
                 </div>
@@ -542,7 +763,8 @@
                 <div class="honor-item">
                     <div class="honor-icon">🏭</div>
                     <div>
-                        <div class="honor-text">عضو انجمن تولیدکنندگان فولاد ایران و انجمن آزمایشگاه‌های همکار قزوین</div>
+                        <div class="honor-text">عضو انجمن تولیدکنندگان فولاد ایران و انجمن آزمایشگاه‌های همکار قزوین
+                        </div>
                     </div>
                 </div>
             </section>
@@ -560,4 +782,5 @@
     </div>
 
 </body>
+
 </html>
