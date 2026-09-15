@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رزومه حامد خانه‌پز</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
-        type="text/css" />
+
+    <title>رزومه حرفه‌ای | حامد</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --primary-color: #2c3e50;
+            --secondary-color: #34495e;
             --accent-color: #3498db;
+            --accent-dark: #2980b9;
             --sidebar-bg: #2c3e50;
             --sidebar-text: #ecf0f1;
-            --sidebar-heading: #ffffff;
-            --text-dark: #333333;
-            --text-light: #555555;
+            --text-color: #2c3e50;
+            --muted-text: #667085;
+            --light-bg: #f5f7fa;
+            --border-color: #e4e7eb;
             --white: #ffffff;
-            --bg-body: #f4f7f6;
         }
 
         * {
@@ -28,759 +32,1072 @@
         }
 
         body {
-            font-family: 'Vazirmatn', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-dark);
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
+            font-family: "Vazirmatn", sans-serif;
+            background: #e9edf2;
+            color: var(--text-color);
+            line-height: 1.8;
         }
 
-        .resume-container {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            max-width: 1050px;
+        .resume {
             width: 100%;
+            max-width: 1100px;
+            margin: 30px auto;
             background: var(--white);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-radius: 10px;
-            overflow: hidden;
-            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            min-height: 1450px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            direction: ltr;
         }
 
-        /* --- سایدبار --- */
+        /* =========================
+           SIDEBAR
+        ========================= */
+
         .sidebar {
-            background-color: var(--sidebar-bg);
+            background: var(--sidebar-bg);
             color: var(--sidebar-text);
-            padding: 40px 25px;
+            padding: 35px 25px;
+            direction: rtl;
         }
 
-        .summary-text strong {
-            color: var(--primary-color);
-            font-weight: 800;
+        .profile {
+            text-align: center;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            margin-bottom: 25px;
         }
 
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            background-color: #34495e;
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
+        .profile img {
+            width: 145px;
+            height: 145px;
             object-fit: cover;
-            top: -1px;
-            position: relative;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.15);
+            margin-bottom: 15px;
+        }
+
+        .profile h1 {
+            font-size: 25px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .profile .job-title {
+            color: #b9d9ef;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.8;
         }
 
         .sidebar-section {
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .sidebar-title {
-            font-size: 1rem;
-            font-weight: 800;
-            color: var(--sidebar-heading);
-            margin-bottom: 12px;
-            padding-bottom: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
         }
 
-        .info-item {
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
             margin-bottom: 10px;
-            font-size: 0.85rem;
-            color: var(--sidebar-text);
+            font-size: 12.5px;
+            color: #dce3e8;
+            word-break: break-word;
+        }
+
+        .contact-item .icon {
+            color: #66b7e8;
+            min-width: 18px;
+            font-weight: 700;
+        }
+
+        .skill {
+            margin-bottom: 13px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12.5px;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 5px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            background: var(--accent-color);
+            border-radius: 10px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #e9eef2;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12.5px;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .main {
+            direction: rtl;
+            padding: 38px 42px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            color: var(--primary-color);
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 17px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid var(--border-color);
         }
 
-        .info-label {
-            font-weight: 700;
-            color: #bdc3c7;
-            min-width: 65px;
-            font-size: 0.8rem;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            padding: 4px 10px;
+        .section-title::before {
+            content: "";
+            width: 5px;
+            height: 24px;
+            background: var(--accent-color);
             border-radius: 4px;
-            font-size: 0.75rem;
-            margin: 2px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: inline-block;
         }
 
-        /* استایل جدید گواهینامه‌ها در سایدبار (در صورت نیاز) یا بخش اصلی */
-        /* اینجا برای بخش اصلی استفاده شده اما اگر بخواهید در سایدبار باشد هم قابل استفاده است */
-
-        /* --- بخش اصلی --- */
-        .main-content {
-            padding: 45px 40px;
+        .summary {
+            background: var(--light-bg);
+            border-right: 4px solid var(--accent-color);
+            padding: 17px 20px;
+            border-radius: 5px;
+            font-size: 13.5px;
+            line-height: 2.05;
+            color: #394553;
+            text-align: justify;
         }
 
-        header {
-            margin-bottom: 35px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
+        /* =========================
+           TARGET POSITION
+        ========================= */
+
+        .target-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 28px;
         }
 
-        h1 {
-            font-size: 2.2rem;
+        .target-item {
+            border: 1px solid var(--border-color);
+            background: #fff;
+            border-radius: 5px;
+            padding: 12px 10px;
+            text-align: center;
+        }
+
+        .target-item strong {
+            display: block;
+            font-size: 13px;
+            color: var(--primary-color);
+            margin-bottom: 3px;
+        }
+
+        .target-item span {
+            font-size: 11px;
+            color: var(--muted-text);
+        }
+
+        /* =========================
+           BUSINESS SKILLS
+        ========================= */
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .business-item {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 11px 13px;
+            font-size: 12.5px;
+            color: #344054;
+        }
+
+        .business-item strong {
+            color: var(--primary-color);
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-item {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 25px;
+            border-right: 2px solid #dce3e8;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            right: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 4px;
+        }
+
+        .experience-header h3 {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .company {
+            font-size: 12.5px;
+            color: var(--accent-dark);
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 11px;
+            color: #7b8794;
+            white-space: nowrap;
+            background: #f1f4f7;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .experience-list {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-right: 17px;
+            margin-bottom: 6px;
+            font-size: 12.5px;
+            color: #4b5563;
+        }
+
+        .experience-list li::before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--accent-color);
+            font-weight: 800;
+        }
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .achievement {
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 13px;
+            background: #fff;
+        }
+
+        .achievement-number {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent-color);
+            line-height: 1.2;
+        }
+
+        .achievement-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+
+        .achievement-text {
+            font-size: 11px;
+            color: var(--muted-text);
+            margin-top: 3px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project {
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+        }
+
+        .project h3 {
+            font-size: 13.5px;
             color: var(--primary-color);
             margin-bottom: 5px;
         }
 
-        .job-title {
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            font-weight: 700;
+        .project p {
+            font-size: 12px;
+            color: #59636e;
         }
 
-        .section {
-            margin-bottom: 35px;
-        }
+        /* =========================
+           EDUCATION
+        ========================= */
 
-        .section-title {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #eee;
-            position: relative;
-            font-weight: 800;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            right: 0;
-            width: 60px;
-            height: 2px;
-            background: var(--accent-color);
-        }
-
-        .summary-text {
-            text-align: justify;
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* سوابق کاری */
-        .experience-item {
-            margin-bottom: 25px;
-            padding-right: 15px;
-            border-right: 3px solid #eef2f5;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-
-        .exp-role {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: var(--text-dark);
-        }
-
-        .exp-company {
-            color: var(--accent-color);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .exp-date {
-            font-size: 0.7rem;
-            color: var(--white);
-            background: var(--primary-color);
-            padding: 2px 8px;
-            border-radius: 20px;
-        }
-
-        .exp-details ul {
-            list-style-type: disc;
-            padding-right: 18px;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .exp-details li {
-            margin-bottom: 4px;
-            text-align: justify;
-        }
-
-        /* 1. اصلاح پروژه‌های کلیدی: فاصله کم + جاستیفای */
-        .project-item {
-            margin-bottom: 12px;
-            line-height: 1.5;
-            text-align: justify;
-            font-size: 0.88rem;
-            color: var(--text-light);
-        }
-
-        .project-item strong {
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-
-        /* 2. اصلاح سوابق تحصیلی: جمع‌وجورتر */
         .education-item {
             margin-bottom: 15px;
-            /* کاهش فاصله */
-            padding-right: 15px;
-            border-right: 3px solid #eef2f5;
         }
 
-        .edu-degree {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--sidebar-text);
-        }
-
-        /* کمی کوچکتر */
-        .edu-univ {
-            color: var(--accent-color);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .edu-score {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-top: 2px;
-        }
-
-        /* 3. اصلاح گواهینامه‌های تخصصی: چیدمان منظم لیستی */
-        .cert-category {
-            margin-bottom: 18px;
-        }
-
-        .cert-cat-title {
-            font-weight: 800;
+        .education-item h3 {
+            font-size: 14px;
             color: var(--primary-color);
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 2px;
         }
 
-        .cert-cat-title::before {
-            content: '';
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background: var(--accent-color);
-            border-radius: 50%;
+        .education-item p {
+            font-size: 12px;
+            color: var(--muted-text);
         }
 
-        .cert-list {
-            display: flex;
-            flex-direction: column;
-            /* تغییر به ستونی برای نظم بیشتر */
-            gap: 4px;
-            padding-right: 14px;
-        }
-
-        .cert-badge {
-            background: transparent;
-            border: none;
-            color: var(--text-light);
-            padding: 0;
-            font-size: 0.88rem;
-            font-weight: 400;
-            position: relative;
-            padding-right: 12px;
-            line-height: 1.4;
-            text-align: justify;
-        }
-
-        .cert-badge::before {
-            content: '•';
-            color: var(--accent-color);
-            position: absolute;
-            right: 0;
-            font-weight: bold;
-        }
-
-        /* افتخارات */
-        .honor-item {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 12px;
-            align-items: flex-start;
-        }
-
-        .honor-icon {
-            min-width: 28px;
-            height: 28px;
-            background: #fff8e1;
-            color: #f39c12;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            margin-top: 2px;
-        }
-
-        .honor-text {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            line-height: 1.5;
-            text-align: justify;
-        }
-
-        .honor-year {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            display: block;
-            margin-top: 2px;
-        }
-
-        @media (max-width: 850px) {
-            .resume-container {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                text-align: center;
-                border-bottom: 5px solid var(--accent-color);
-            }
-
-            .sidebar-title {
-                display: block;
-            }
-
-            .info-item {
-                justify-content: center;
-            }
-
-            .main-content {
-                padding: 30px 20px;
-            }
-
-            .exp-header {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            .cert-list {
-                padding-right: 0;
-                align-items: normal;
-            }
-
-            .cert-badge {
-                padding-right: 0;
-                text-align: right;
-            }
-
-            .cert-badge::before {
-                display: none;
-            }
-        }
+        /* =========================
+           PRINT
+        ========================= */
 
         @media print {
             body {
-                background: white;
-                padding: 0;
+                background: #fff;
             }
 
-            .resume-container {
+            .resume {
+                margin: 0;
+                max-width: none;
+                width: 100%;
                 box-shadow: none;
-                max-width: 100%;
-                border-radius: 0;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+            .resume {
+                grid-template-columns: 1fr;
+                margin: 0;
             }
 
             .sidebar {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                padding: 30px 25px;
             }
 
-            .exp-date {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+            .main {
+                padding: 30px 25px;
+            }
+
+            .target-box {
+                grid-template-columns: 1fr;
             }
         }
 
-        /* --- استایل بخش QR Code در سایدبار --- */
-        .qr-section {
-            margin-top: 35px;
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.2);
-        }
+        @media (max-width: 600px) {
+            .business-grid,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
 
-        .qr-title {
-            font-size: 0.75rem;
-            color: #bdc3c7;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+            .experience-header {
+                flex-direction: column;
+                gap: 3px;
+            }
 
-        .qr-wrapper {
-            background: #ffffff;
-            padding: 10px;
-            border-radius: 8px;
-            display: inline-block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+            .profile img {
+                width: 125px;
+                height: 125px;
+            }
 
-        .qr-wrapper svg,
-        .qr-wrapper img {
-            width: 110px;
-            height: 110px;
-            display: block;
+            .main {
+                padding: 25px 18px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="resume-container">
-        <!-- سایدبار -->
-        <aside class="sidebar">
-            <div class="profile-photo">
-                <img src="1.jpg" alt="حامد خانه‌پز"
-                    onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:#7f8c8d\'>📷</span>'">
+<div class="resume">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="profile">
+            <img src="1.jpg" alt="حامد">
+
+            <h1>حامد</h1>
+
+            <div class="job-title">
+                سرپرست / مدیر فروش صنعتی<br>
+                توسعه بازار B2B | Technical Sales
+            </div>
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-title">
+                اطلاعات تماس
             </div>
 
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">اطلاعات فردی</h3>
-                <div class="info-item"><span class="info-label">تولد:</span><span>۱۳۶۵</span></div>
-                <div class="info-item"><span class="info-label">شهر:</span><span>قزوین، ایران</span></div>
-                <!-- <div class="info-item"><span class="info-label">وضعیت تاهل:</span><span>متاهل</span></div> -->
+            <div class="contact-item">
+                <span class="icon">☎</span>
+                <span>شماره تماس</span>
             </div>
 
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">تماس</h3>
-                <div class="info-item"><span class="info-label">موبایل:</span><span dir="ltr">+98 919 389 8001</span>
+            <div class="contact-item">
+                <span class="icon">✉</span>
+                <span>ایمیل</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon">in</span>
+                <span>LinkedIn</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon">⌂</span>
+                <span>ایران</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-title">
+                حوزه‌های تخصصی
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>فروش صنعتی B2B</span>
+                    <span>85%</span>
                 </div>
-                <div class="info-item"><span class="info-label">ایمیل:</span><span dir="ltr"
-                        style="font-size:0.75rem;">H.khanepaz@gmail.com</span></div>
-                <div class="info-item">
-                    <span class="info-label">Linkedin</span>
-                    <a href="https://www.linkedin.com/in/hamed-khanepaz-7876478a/" target="_blank"
-                        rel="noopener noreferrer"
-                        style="font-size:0.75rem; color: #3498db; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
-                        onmouseover="this.style.color='#3498db'; this.style.borderBottom='1px solid #fff'"
-                        onmouseout="this.style.color='#fff'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
-                        <img src="linkedin-svgrepo-com.svg" alt="" style="width:20px;">
-                    </a>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">پلتفرم LIMS اختصاصی:</span>
-                    <a href="https://iso17025-docs.ir" target="_blank" rel="noopener noreferrer"
-                        style="font-size:0.75rem; color: #fff; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
-                        onmouseover="this.style.color='#fff'; this.style.borderBottom='1px solid #fff'"
-                        onmouseout="this.style.color='#3498db'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
-                        Iso17025-docs.ir
-                    </a>
+                <div class="skill-bar">
+                    <span style="width:85%"></span>
                 </div>
             </div>
 
-            <!-- 2. سوابق تحصیلی: جمع‌وجورتر -->
-            <section class="sidebar-section">
-                <h2 class="sidebar-title">سوابق تحصیلی</h2>
-                <div class="education-item">
-                    <div class="exp-header">
-                        <div class="edu-degree">کارشناسی ارشد مهندسی مواد (ریخته‌گری)</div>
-                        <div class="exp-date">دانشگاه علم و صنعت ایران</div>
-                    </div>
-                    <!-- <div class="edu-univ">رتبه اول، معدل ۱۶٫۱۰</div> -->
+            <div class="skill">
+                <div class="skill-name">
+                    <span>ارتباط با مشتری صنعتی</span>
+                    <span>90%</span>
                 </div>
-                <div class="education-item">
-                    <div class="exp-header">
-                        <div class="edu-degree">کارشناسی مهندسی مواد (متالورژی صنعتی)</div>
-                        <div class="exp-date">دانشگاه بین‌المللی امام خمینی (ره)</div>
-                    </div>
-                    <!-- <div class="edu-univ">رتبه دوم، معدل ۱۶٫۷۲</div> -->
+                <div class="skill-bar">
+                    <span style="width:90%"></span>
                 </div>
-            </section>
+            </div>
 
-
-
-
-            <div class="sidebar-section">
-                       <h3 class="sidebar-title">مهارت‌های مدیریتی</h3>
-                <div>
-                      <span class="skill-tag">مدیریت کیفیت</span>
-                     <span class="skill-tag">رهبری تیم</span>
-                    <span class="skill-tag">تحول دیجیتال</span>
-                    <span class="skill-tag">ممیزی داخلی</span>
-                    <span class="skill-tag">مدیریت ریسک</span>
+            <div class="skill">
+                <div class="skill-name">
+                    <span>تحلیل نیاز فنی مشتری</span>
+                    <span>95%</span>
                 </div>
-                <br>
-
-                <h3 class="sidebar-title">مهارت‌های تخصصی</h3>
-                <div>
-                    <span class="skill-tag">ISO/IEC 17025</span>
-                    <span class="skill-tag">LIMS</span>
-                    <span class="skill-tag">SPC</span>
-                    <span class="skill-tag">تضمین کیفیت نتایج</span>
-                    <span class="skill-tag">محاسبات عدم قطعیت</span>
-                    <span class="skill-tag">متالوگرافی</span>
-                    <span class="skill-tag">کوانتومتری</span>
-                    <span class="skill-tag">آزمون های مکانیکی فلزات</span>
-                   
+                <div class="skill-bar">
+                    <span style="width:95%"></span>
                 </div>
-          
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>مذاکره فنی و تجاری</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                    <span style="width:80%"></span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">
+                    <span>مدیریت تیم</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <span style="width:90%"></span>
+                </div>
+            </div>
+
+        </div>
 
 
+        <div class="sidebar-section">
+
+            <div class="sidebar-title">
+                صنایع و حوزه‌ها
+            </div>
+
+            <div class="tag-list">
+                <span class="tag">فولاد</span>
+                <span class="tag">متالورژی</span>
+                <span class="tag">تولید</span>
+                <span class="tag">قطعات صنعتی</span>
+                <span class="tag">کنترل کیفیت</span>
+                <span class="tag">آزمایشگاه</span>
+                <span class="tag">استانداردها</span>
+                <span class="tag">B2B</span>
+                <span class="tag">Technical Sales</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-title">
+                زبان
+            </div>
+
+            <div class="language-item">
+                <span>فارسی</span>
+                <span>زبان مادری</span>
+            </div>
+
+            <div class="language-item">
+                <span>انگلیسی</span>
+                <span>متوسط</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main">
+
+        <!-- هدف شغلی -->
+
+        <section class="section">
+
+            <div class="section-title">
+                هدف شغلی
+            </div>
+
+            <div class="target-box">
+
+                <div class="target-item">
+                    <strong>سرپرست فروش</strong>
+                    <span>Industrial Sales Supervisor</span>
+                </div>
+
+                <div class="target-item">
+                    <strong>رئیس فروش</strong>
+                    <span>Sales Manager / Head of Sales</span>
+                </div>
+
+                <div class="target-item">
+                    <strong>فروش فنی</strong>
+                    <span>Technical Sales Manager</span>
+                </div>
 
             </div>
 
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">زبان‌ها</h3>
-                <!-- <div class="info-item"><span>فارسی (مادری)</span></div> -->
-                <div class="info-item"><span>انگلیسی (تخصصی/فنی)</span></div>
+        </section>
+
+
+        <!-- خلاصه حرفه‌ای -->
+
+        <section class="section">
+
+            <div class="section-title">
+                خلاصه حرفه‌ای
             </div>
 
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">نرم‌افزارها</h3>
-                <div>
-                    <span class="skill-tag">Microsoft Office</span>
-                    <span class="skill-tag">MATLAB</span>
-                    <span class="skill-tag">Photoshop</span>
-                    <span class="skill-tag">AutoCAD</span>
-                    <span class="skill-tag">SolidWorks</span>
-                    <span class="skill-tag">HTML/CSS/JavaScript</span>
-                    <span class="skill-tag">PHP/MySQL</span>
-                </div>
+            <div class="summary">
+
+                متخصص و مدیر فنی با بیش از ۱۳ سال تجربه در صنعت فولاد،
+                تولید، کنترل کیفیت و مدیریت آزمایشگاه، با سابقه فعالیت در
+                محیط‌های صنعتی و ارتباط مستقیم با نیازهای فنی مشتریان و واحدهای
+                تولیدی.
+
+                دارای تجربه در مدیریت تیم، تحلیل نیازهای فنی، حل مسائل مشتری،
+                تفسیر استانداردها و مشخصات محصول، هماهنگی میان واحدهای فنی،
+                تولید و کیفیت و استفاده از داده برای بهبود عملکرد.
+
+                هدف حرفه‌ای، انتقال این تجربه به حوزه
+                <strong>فروش صنعتی، توسعه بازار و Technical Sales</strong>
+                و ایجاد ارزش برای مشتری از طریق ترکیب دانش فنی، شناخت محصول،
+                مذاکره و مدیریت ارتباط با مشتری است.
+
             </div>
-            <!-- بخش QR Code نسخه دیجیتال -->
-            <div class="qr-section">
-                <div class="qr-title">نسخــه‌ی دیجیـتال رزومــه</div>
-                <div class="qr-wrapper">
-                    <img src="qrcode.svg" alt="QRCode" style="width: 120px;">
-                </div>
+
+        </section>
+
+
+        <!-- توانمندی‌های فروش -->
+
+        <section class="section">
+
+            <div class="section-title">
+                توانمندی‌های فروش و کسب‌وکار
             </div>
-        </aside>
 
-        <!-- بخش اصلی -->
-        <main class="main-content">
-            <header>
-                <h1>حامد خانه‌پز</h1>
-                <div class="job-title"> مدیر فنی آزمایشگاه ، مدیر کنترل کیفیت ، متخصص تحول دیجیتال آزمایشگاه</div>
-            </header>
+            <div class="business-grid">
 
-            <section class="section">
-                <h2 class="section-title">خلاصه رزومه</h2>
-                <p class="summary-text">
-                    مدیر کنترل کیفیت و آزمایشگاه با بیش از ۱۳ سال تجربه در صنعت فولاد، متخصص در تحول دیجیتال
-                    آزمایشگاه‌ها، <strong>استقرار ISO/IEC 17025</strong>، کنترل کیفیت خطوط تولید فولادی و توسعه
-                    سیستم‌های تصمیم‌یار کیفیت. دارای تجربه مدیریت تیم‌های کیفی، <strong>طراحی LIMS اختصاصی</strong> و
-                    بهبود مستمر فرآیندهای کنترل کیفیت.
-                </p>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">سوابق کاری</h2>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-role">مدیر فنی آزمایشگاه</div>
-                            <div class="exp-company">شرکت صنایع هفت الماس</div>
-                        </div>
-                        <div class="exp-date"> ۱۳۹۶ تاکنون</div>
-                    </div>
-                    <div class="exp-details">
-                        <ul>
-                            <li>طراحی، استقرار و توسعه سیستم مدیریت کیفیت ISO/IEC 17025 و اخذ/تمدید اعتبارنامه.</li>
-                            <li>طراحی و پیاده‌سازی سامانه اختصاصی LIMS؛ کاهش ۶۰٪ زمان پردازش داده‌ها و خطای انسانی.</li>
-                            <li>کاهش هزینه‌های مقایسات بین‌آزمایشگاهی و مواد مرجع از طریق برنامه‌ریزی هوشمند.</li>
-                            <li>کاهش ۲۵٪ زمان تحویل نتایج با بهینه‌سازی گزارش‌دهی هوشمند و آموزش پرسنل.</li>
-                            <li>مدیریت پروژه طراحی و ساخت دستگاه فام‌سنج (سخت‌افزار + نرم‌افزار).</li>
-                            <li>مسئولیت اجرای بیش از ۲۰۰۰ آزمون مکانیکی و شیمیایی سالانه.</li>
-                        </ul>
-                    </div>
+                <div class="business-item">
+                    <strong>فروش B2B صنعتی</strong><br>
+                    شناخت فرآیند تصمیم‌گیری مشتریان صنعتی و فروش مبتنی بر ارزش
                 </div>
 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-role">مدیر کنترل کیفیت خطوط تولید</div>
-                            <div class="exp-company">شرکت صنایع هفت الماس</div>
-                        </div>
-                        <div class="exp-date">۱۳۹۲ تا ۱۳۹۶</div>
-                    </div>
-                    <div class="exp-details">
-                        <ul>
-                            <li>کاهش ۱۲٪ نرخ عیوب محصولات گالوانیزه رنگی از طریق استقرار SPC.</li>
-                            <li>مدیریت پروژه مصرف سرب در خط گالوانیزه؛ ارتقاء ۳۰٪ نتایج تست خمش.</li>
-                            <li>هماهنگی با واحد بازاریابی و فروش برای ارائه مستندات کیفی به مشتریان.</li>
-                        </ul>
-                    </div>
+                <div class="business-item">
+                    <strong>Technical Sales</strong><br>
+                    تبدیل نیاز فنی مشتری به پیشنهاد قابل ارائه و قابل اجرا
                 </div>
 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div>
-                            <div class="exp-role">مدرس مدعو دانشگاه‌ها</div>
-                            <div class="exp-company">آزاد اسلامی، علمی‌کاربردی، غیرانتفاعی</div>
-                        </div>
-                        <div class="exp-date">۱۳۸۸ تا ۱۳۹۱</div>
-                    </div>
-                    <div class="exp-details">
-                        <ul>
-                            <li>تدریس خواص مکانیکی مواد، ریخته‌گری، طراحی مهندسی جوشکاری، عملیات حرارتی و روش‌های تولید.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 1. پروژه‌های کلیدی: فاصله کم + جاستیفای -->
-            <section class="section">
-                <h2 class="section-title">پروژه‌های کلیدی و دستاوردها</h2>
-                <div class="project-item"><strong>استقرار کامل استاندارد ۱۷۰۲۵:</strong> تدوین بیش از ۱۰۰ سند و اخذ
-                    گواهی اعتباربخشی.</div>
-                <div class="project-item"><strong>سامانه LIMS اختصاصی:</strong> شامل ماژول‌های مدیریت ریسک، عدم‌اطمینان،
-                    SPC و قاعده تصمیم‌گیری. نتیجه: کاهش ۶۰٪ زمان پردازش.<a href="https://iso17025-docs.ir"
-                        target="_blank" rel="noopener noreferrer"
-                        style="font-size:0.85rem; color: #3498db; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: all 0.2s;"
-                        onmouseover="this.style.color='#3498db'; this.style.borderBottom='1px solid #fff'"
-                        onmouseout="this.style.color='#3498db'; this.style.borderBottom='1px dashed rgba(255,255,255,0.3)'">
-                        ورود به سایت
-                    </a> </div>
-                <div class="project-item"><strong>دستگاه فام‌سنج:</strong> طراحی مکانیکی، الکترونیکی و نرم‌افزاری با
-                    قابلیت اتصال به LIMS؛ کاهش ۴۰٪ هزینه‌های آزمون.</div>
-                <div class="project-item"><strong>تدوین استانداردهای ملی (INSO):</strong> عضویت در ۶ کمیسیون (ورق
-                    گالوانیزه، آزمون خستگی، سختی‌سنجی ناپ، ورق سرد نوردیده).</div>
-                <div class="project-item"><strong>دوره‌های آموزشی ضمن‌خدمت:</strong> طراحی و اجرای بیش از ۲۰ دوره آموزشی
-                    برای پرسنل آزمایشگاه و تولید.</div>
-            </section>
-
-
-            <!-- 3. گواهینامه‌های تخصصی: چیدمان لیستی منظم -->
-            <section class="section">
-                <h2 class="section-title">گواهینامه‌های تخصصی</h2>
-
-                <div class="cert-category">
-                    <div class="cert-cat-title">مدیریت کیفیت</div>
-                    <div class="cert-list">
-                        <span class="cert-badge">ISO 9001، مبانی و مستندسازی ۱۷۰۲۵</span>
-                        <span class="cert-badge">ممیزی داخلی ۱۷۰۲۵، مدیریت ریسک آزمایشگاه</span>
-                        <span class="cert-badge">تضمین کیفیت نتایج، تخمین عدم قطعیت، صحه‌گذاری روش‌های آزمون</span>
-                        <span class="cert-badge">کنترل کیفیت داخلی ، مقایسات بین‌آزمایشگاهی، بیانیه انطباق</span>
-                        <span class="cert-badge">اندازه‌گیری و کالیبراسیون، محاسبه بازه‌های کالیبراسیون</span>
-                    </div>
+                <div class="business-item">
+                    <strong>مدیریت ارتباط با مشتری</strong><br>
+                    پیگیری مسائل، نیازها، شکایات و الزامات فنی مشتری
                 </div>
 
-                <div class="cert-category">
-                    <div class="cert-cat-title">استاندارد و تدوین</div>
-                    <div class="cert-list">
-                        <span class="cert-badge">ساختار و شیوه نگارش استانداردهای ملی</span>
-                        <span class="cert-badge">روش اجرایی فرایند تدوین استاندارد</span>
-                        <span class="cert-badge">قوانین سازمان ملی استاندارد</span>
-                        <span class="cert-badge">اصول سرپرستی، نگارش نظامنامه کیفیت</span>
-                    </div>
+                <div class="business-item">
+                    <strong>نیازسنجی مشتری</strong><br>
+                    تحلیل مشخصات، استانداردها و الزامات فنی محصول
                 </div>
 
-                <!-- <div class="cert-category">
-                    <div class="cert-cat-title">تخصصی فولاد</div>
-                    <div class="cert-list">
-                        <span class="cert-badge">ورق‌های فولادی سرد نوردیده و گالوانیزه گرم پیوسته</span>
-                        <span class="cert-badge">آلیاژهای آلومینیوم،</span>
-                    </div>
-                </div> -->
+                <div class="business-item">
+                    <strong>مذاکره فنی و تجاری</strong><br>
+                    ایجاد ارتباط میان ارزش فنی محصول و نیاز اقتصادی مشتری
+                </div>
 
-                <!-- <div class="cert-category">
-                    <div class="cert-cat-title">مدیریتی</div>
-                    <div class="cert-list">
-                     
-                       
-                    </div>
-                </div> -->
-            </section>
+                <div class="business-item">
+                    <strong>توسعه بازار</strong><br>
+                    شناسایی فرصت‌های جدید در بازارهای صنعتی و مشتریان بالقوه
+                </div>
 
-            <!-- افتخارات و عضویت‌ها -->
-            <section class="section">
-                <h2 class="section-title">افتخارات و عضویت‌های حرفه‌ای</h2>
+                <div class="business-item">
+                    <strong>مدیریت تیم</strong><br>
+                    برنامه‌ریزی، تقسیم کار، پایش عملکرد و حل مسائل تیمی
+                </div>
 
-                <div class="honor-item">
-                    <div class="honor-icon">🏆</div>
+                <div class="business-item">
+                    <strong>تحلیل داده</strong><br>
+                    استفاده از داده برای تصمیم‌گیری، گزارش‌دهی و بهبود فرآیند
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- تجربه کاری -->
+
+        <section class="section">
+
+            <div class="section-title">
+                سوابق حرفه‌ای
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-header">
+
                     <div>
-                        <div class="honor-text">رتبه برتر طرح‌های نوآورانه، چهارمین همایش آزمایشگاه‌های زنجیره معدن و
-                            فولاد</div>
-                        <span class="honor-year">۱۴۰۴</span>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">📄</div>
-                    <div>
-                        <div class="honor-text">رتبه برتر بخش مقالات، همایش آزمایشگاه‌های زنجیره معدن و فولاد</div>
-                        <span class="honor-year">۱۴۰۴</span>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">⭐</div>
-                    <div>
-                        <div class="honor-text">کارگر نمونه استان قزوین، سی‌وچهارمین جشنواره امتنان</div>
-                        <span class="honor-year">۱۴۰۱</span>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">✅</div>
-                    <div>
-                        <div class="honor-text">پروانه تأیید صلاحیت مدیر کنترل کیفیت از سازمان ملی استاندارد ایران</div>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">👥</div>
-                    <div>
-                        <div class="honor-text">عضو هیأت مدیره انجمن آزمایشگاه‌های همکار استان قزوین</div>
-                        <span class="honor-year">۱۴۰۱</span>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">📋</div>
-                    <div>
-                        <div class="honor-text">عضو کمیسیون تدوین استانداردهای ملی ایران (۶ عنوان استاندارد)</div>
-                    </div>
-                </div>
-                <div class="honor-item">
-                    <div class="honor-icon">🏭</div>
-                    <div>
-                        <div class="honor-text">عضو انجمن تولیدکنندگان فولاد ایران و انجمن آزمایشگاه‌های همکار قزوین
+                        <h3>مدیر فنی / مدیر آزمایشگاه</h3>
+                        <div class="company">
+                            صنعت فولاد و تولید محصولات فولادی
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <section class="section">
-                <h2 class="section-title">مقالات برگزیده</h2>
-                <ul style="padding-right:18px; color:var(--text-light); font-size:0.88rem; line-height:1.6;">
-                    <li>«آزمایشگاه‌ها و توسعه صادرات محصولات فولادی: از کنترل کیفیت تا تحول دیجیتال» (مقاله برتر ۱۴۰۴)</li>
-                    <li>«تعریف و شناسایی مدیریت دانش و تاثیر آن در افزایش بهره‌وری» (سازمان استاندارد ۱۳۹۲)</li>
-                    <li>«بررسی اثر مذاب آلومینیم بر مغزه‌های منیزیم به روش ریخته‌گری مرکب» (همایش متالورژی ۱۳۸۹)</li>
+                    <div class="date">
+                        ۱۳۹۹ — اکنون
+                    </div>
+
+                </div>
+
+
+                <ul class="experience-list">
+
+                    <li>
+                        مدیریت فعالیت‌های فنی و عملیاتی آزمایشگاه و هماهنگی میان
+                        واحدهای آزمایشگاه، کنترل کیفیت و تولید.
+                    </li>
+
+                    <li>
+                        مدیریت تیم تخصصی و برنامه‌ریزی فعالیت‌ها با تمرکز بر
+                        کیفیت، زمان پاسخ‌گویی و رضایت واحدهای داخلی و مشتریان.
+                    </li>
+
+                    <li>
+                        تحلیل الزامات فنی محصولات و استانداردها و تبدیل نیازهای
+                        فنی به الزامات قابل اجرا برای واحدهای عملیاتی.
+                    </li>
+
+                    <li>
+                        تعامل با واحدهای مختلف سازمان در جهت حل مسائل کیفی،
+                        فنی و مشتری‌محور.
+                    </li>
+
+                    <li>
+                        مشارکت در پیاده‌سازی و توسعه سیستم مدیریت آزمایشگاه
+                        بر اساس ISO/IEC 17025.
+                    </li>
+
                 </ul>
-            </section>
 
-        </main>
-    </div>
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-header">
+
+                    <div>
+                        <h3>رئیس کنترل کیفیت</h3>
+                        <div class="company">
+                            صنعت فولاد
+                        </div>
+                    </div>
+
+                    <div class="date">
+                        سابقه مدیریتی
+                    </div>
+
+                </div>
+
+
+                <ul class="experience-list">
+
+                    <li>
+                        مدیریت فرآیندهای کنترل کیفیت و ارتباط مستمر با تولید
+                        برای رفع مغایرت‌ها و مشکلات محصول.
+                    </li>
+
+                    <li>
+                        بررسی مشخصات فنی، الزامات کیفی و استانداردهای مرتبط
+                        با محصولات.
+                    </li>
+
+                    <li>
+                        تحلیل نتایج آزمون‌ها و داده‌های کیفی برای شناسایی
+                        مشکلات و تصمیم‌گیری مدیریتی.
+                    </li>
+
+                    <li>
+                        تعامل با واحدهای فنی و عملیاتی برای حل مسائل و
+                        بهبود کیفیت محصول.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-header">
+
+                    <div>
+                        <h3>کارشناس فنی کنترل کیفیت</h3>
+                        <div class="company">
+                            صنعت فولاد
+                        </div>
+                    </div>
+
+                    <div class="date">
+                        سابقه اجرایی
+                    </div>
+
+                </div>
+
+
+                <ul class="experience-list">
+
+                    <li>
+                        انجام و تحلیل آزمون‌های مکانیکی و شیمیایی محصولات
+                        فولادی.
+                    </li>
+
+                    <li>
+                        بررسی انطباق محصولات با استانداردها و الزامات فنی.
+                    </li>
+
+                    <li>
+                        تحلیل داده‌های کیفیت و تهیه گزارش‌های فنی.
+                    </li>
+
+                    <li>
+                        همکاری با واحدهای تولید، فنی و کیفیت برای حل مشکلات
+                        محصول و فرآیند.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- دستاوردها -->
+
+        <section class="section">
+
+            <div class="section-title">
+                دستاوردهای کلیدی
+            </div>
+
+            <div class="achievement-grid">
+
+                <div class="achievement">
+                    <div class="achievement-number">60%</div>
+                    <div class="achievement-title">
+                        کاهش زمان پاسخ‌گویی
+                    </div>
+                    <div class="achievement-text">
+                        بهبود فرآیندها و کاهش TAT در فعالیت‌های آزمایشگاهی
+                    </div>
+                </div>
+
+
+                <div class="achievement">
+                    <div class="achievement-number">10</div>
+                    <div class="achievement-title">
+                        ماژول نرم‌افزاری
+                    </div>
+                    <div class="achievement-text">
+                        طراحی و توسعه LIMS داخلی برای مدیریت فرآیندهای آزمایشگاه
+                    </div>
+                </div>
+
+
+                <div class="achievement">
+                    <div class="achievement-number">30%</div>
+                    <div class="achievement-title">
+                        کاهش زمان گزارش‌دهی
+                    </div>
+                    <div class="achievement-text">
+                        بهبود فرآیند تهیه گزارش‌های فنی و HTML
+                    </div>
+                </div>
+
+
+                <div class="achievement">
+                    <div class="achievement-number">6</div>
+                    <div class="achievement-title">
+                        کمیته تخصصی استاندارد
+                    </div>
+                    <div class="achievement-text">
+                        عضویت در کمیته‌های تدوین و بررسی استانداردهای INSO
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- پروژه‌های کلیدی -->
+
+        <section class="section">
+
+            <div class="section-title">
+                پروژه‌ها و فعالیت‌های شاخص
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    طراحی و توسعه سیستم LIMS داخلی
+                </h3>
+
+                <p>
+                    طراحی و توسعه یک سیستم مدیریت اطلاعات آزمایشگاه با ۱۰ ماژول
+                    با هدف افزایش سرعت گردش اطلاعات، کاهش خطا و بهبود دسترسی
+                    مدیریتی به داده‌ها.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    پیاده‌سازی ISO/IEC 17025
+                </h3>
+
+                <p>
+                    مشارکت و مدیریت فعالیت‌های مرتبط با سیستم مدیریت آزمایشگاه،
+                    شامل مستندسازی، مدیریت ریسک، ممیزی داخلی، عدم قطعیت اندازه‌گیری
+                    و کنترل فرآیندها.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    بهبود فرآیند گزارش‌دهی و تحلیل داده
+                </h3>
+
+                <p>
+                    استفاده از Excel، VBA و ابزارهای تحت وب برای اتوماسیون،
+                    تحلیل داده و کاهش زمان تهیه و ارائه گزارش‌های فنی.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- تحصیلات -->
+
+        <section class="section">
+
+            <div class="section-title">
+                تحصیلات
+            </div>
+
+            <div class="education-item">
+
+                <h3>
+                    مهندسی متالورژی
+                </h3>
+
+                <p>
+                    گرایش مرتبط با صنایع فولاد و فرآیندهای تولید و کنترل کیفیت
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- گواهینامه‌ها -->
+
+        <section class="section">
+
+            <div class="section-title">
+                دوره‌ها و دانش تخصصی
+            </div>
+
+            <div class="tag-list" style="background:#f8fafc; padding:15px; border-radius:5px;">
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    ISO/IEC 17025
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    SPC
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    CP / CPK
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    APQP
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    PPAP
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    CCT / TTT
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    کنترل کیفیت
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    مدیریت فرآیند
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    Excel / VBA
+                </span>
+
+                <span class="tag" style="color:#344054; border-color:#d9dee5; background:#fff;">
+                    LIMS
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
 
 </body>
-
 </html>
